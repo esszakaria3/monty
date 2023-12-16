@@ -1,10 +1,13 @@
 #include "monty.h"
+
 /**
-  *f_sub- sustration
-  *@head: stack head
-  *@counter: line_number
+  *f_sub-  subtracts the top element of the stack,
+  *from the second top element of the stack.
+  *@head: The stack head
+  *@counter: line of number
   *Return: no return
  */
+
 void f_sub(stack_t **head, unsigned int counter)
 {
 	stack_t *aux;

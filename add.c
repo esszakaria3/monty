@@ -1,19 +1,21 @@
 #include "monty.h"
+
 /**
- * f_add - adds the top two elements of the stack.
- * @head: stack head
- * @counter: line_number
+ * f_add - sum the top two elements of the stack and give result
+ * @head:  This is the stack head
+ * @counter: The line number
  * Return: no return
 */
+
 void f_add(stack_t **head, unsigned int counter)
 {
-	stack_t *h;
+	stack_t *d;
 	int len = 0, aux;
 
-	h = *head;
-	while (h)
+	d = *head;
+	while (d)
 	{
-		h = h->next;
+		d = d->next;
 		len++;
 	}
 	if (len < 2)
@@ -24,9 +26,9 @@ void f_add(stack_t **head, unsigned int counter)
 		free_stack(*head);
 		exit(EXIT_FAILURE);
 	}
-	h = *head;
-	aux = h->n + h->next->n;
-	h->next->n = aux;
-	*head = h->next;
-	free(h);
+	d = *head;
+	aux = d->n + d->next->n;
+	d->next->n = aux;
+	*head = d->next;
+	free(d);
 }
